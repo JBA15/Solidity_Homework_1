@@ -17,7 +17,7 @@ contract BitShiftedMasking {
     function obtainBitwiseValues(uint8 numberSelected) public pure returns (uint8[] memory) {
         uint8[] memory finalArray = new uint8[](8);
         uint8 mask = 1; // This mask corresponds to a start at 0000 0001
-        
+
         for (uint8 i = 0; i < 8; i++) {
             uint8 bitValue = numberSelected & mask; // We apply the mask
             finalArray[i] = bitValue; // We store the value
